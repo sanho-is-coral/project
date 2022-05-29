@@ -23,6 +23,24 @@
                 <a class="active" onclick="location.href='index.html'"" style="cursor: pointer;"> 
                     MurangE</a>
                 <a onclick="location.href='profile.html'"style="display:inline-flex;" ><div class="icon"></div>profile</a>
+                <script type="text/javascript">
+                  $(document).ready(function() {
+                      $("icon").click(function() {
+                          $.ajax({
+                              url : "http://localhost:8080/users/{user-id}",
+                              data : 'get',
+                              contentType:"application/json;charset=UTF-8",
+                              dataType : "json",
+                              success : function(data) {
+                                  console.log(data);
+                              },
+                              error : function() {
+                                  alert('error');
+                              }
+                          });
+                      });
+                   });
+              </script>
             </div>
         </nav>
     </header>       

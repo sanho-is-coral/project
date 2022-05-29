@@ -40,6 +40,7 @@ button {
   width: 30%;
   height: 100%;
   max-width: 400px;
+  z-index: 10;
 }
 .nowpart {
   width: 100%;
@@ -87,6 +88,7 @@ button {
   justify-content: center;
   justify-items: center;
   margin: auto;
+  z-index: 3;
 }
 
 .player {
@@ -100,6 +102,7 @@ button {
   justify-content: center;
   justify-items: center;
   background-color: rgb(63, 63, 63);
+  z-index: 10;
 }
 .player div {
   padding: 50px;
@@ -236,7 +239,7 @@ button {
 
 
 
-@media (max-width: 1700px) {
+@media (max-width: 1000px) {
   .main {
     width: 100%;
     text-align: center;
@@ -277,7 +280,7 @@ button {
     width: 100%;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   .playlist {
     display: inline;
     float: inline;
@@ -293,28 +296,16 @@ button {
   background-color: rgba(0, 0, 0, 0.212);
 }
 
-#celebrity {
-  background-image: url("image/celebrity.jpg");
-  background-size: contain;
-}
-
-#lilac {
-  background-image: url("image/lilac.jpg");
-  background-size: contain;
-}
-
-#chatshire {
-  background-image: url("image/chatshire.jpg");
-  background-size: contain;
-}
 
 
 
 #slider {
   margin: 0 auto;
-  width: 100%;
+  margin-left: 100px;
+  width: 1200px;
   max-width: 100%;
   text-align: center;
+  z-index: -1;
 }
 
 #slider input[type=radio] {
@@ -391,14 +382,13 @@ button {
   padding: 10px;
 }
 
-#controls {
+#controls1 {
   margin: -130px 0 0 0;
   width: 100%;
   height: 50px;
-  z-index: 3;
   position: relative;
 }
-#controls label {
+#controls1 label {
   transition: opacity 0.2s ease-out;
   display: none;
   width: 50px;
@@ -406,26 +396,26 @@ button {
   background-color: #333;
   color: #333;
 }
-#controls label:hover {
+#controls1 label:hover {
   opacity: 1;
 }
 
-#slide1:checked ~ #controls label:nth-child(2),
-#slide2:checked ~ #controls label:nth-child(3),
-#slide3:checked ~ #controls label:nth-child(4),
-#slide4:checked ~ #controls label:nth-child(5),
-#slide5:checked ~ #controls label:nth-child(1)
+#slide1:checked ~ #controls1 label:nth-child(2),
+#slide2:checked ~ #controls1 label:nth-child(3),
+#slide3:checked ~ #controls1 label:nth-child(4),
+#slide4:checked ~ #controls1 label:nth-child(5),
+#slide5:checked ~ #controls1 label:nth-child(1)
 {
   background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
   float: right;
   margin: 0 -50px 0 0;
   display: block;
 }
-#slide1:checked ~ #controls label:nth-child(5),
-#slide2:checked ~ #controls label:nth-child(1),
-#slide3:checked ~ #controls label:nth-child(2),
-#slide4:checked ~ #controls label:nth-child(3),
-#slide5:checked ~ #controls label:nth-child(4)
+#slide1:checked ~ #controls1 label:nth-child(5),
+#slide2:checked ~ #controls1 label:nth-child(1),
+#slide3:checked ~ #controls1 label:nth-child(2),
+#slide4:checked ~ #controls1 label:nth-child(3),
+#slide5:checked ~ #controls1 label:nth-child(4)
 {
   background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
   float: left;
@@ -453,4 +443,47 @@ button {
 #slide5:checked ~ #bullets label:nth-child(5)
 {
   background: #333;
+}
+
+
+
+#controls2 {
+  margin: -130px 0 0 0;
+  width: 100%;
+  height: 50px;
+  position: relative;
+}
+#controls2 label {
+  transition: opacity 0.2s ease-out;
+  display: none;
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  color: #333;
+}
+#controls2 label:hover {
+  opacity: 1;
+}
+
+#slide1:checked ~ #controls2 label:nth-child(2),
+#slide2:checked ~ #controls2 label:nth-child(3),
+#slide3:checked ~ #controls2 label:nth-child(4),
+#slide4:checked ~ #controls2 label:nth-child(5),
+#slide5:checked ~ #controls2 label:nth-child(1)
+{
+  background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+  float: right;
+  margin: 0 -50px 0 0;
+  display: block;
+}
+#slide1:checked ~ #controls2 label:nth-child(5),
+#slide2:checked ~ #controls2 label:nth-child(1),
+#slide3:checked ~ #controls2 label:nth-child(2),
+#slide4:checked ~ #controls2 label:nth-child(3),
+#slide5:checked ~ #controls2 label:nth-child(4)
+{
+  background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+  float: left;
+  margin: 0 0 0 -50px;
+  display: block;
 }
